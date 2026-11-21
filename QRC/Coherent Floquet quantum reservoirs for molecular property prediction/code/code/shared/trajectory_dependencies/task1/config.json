@@ -1,0 +1,24 @@
+{
+  "raw_h5": "../data/raw/Transition1x.h5",
+  "processed_dataset": "../data/processed/task1/transition1x_task1_q8_t6_n3000.npz",
+  "sample_counts": {
+    "train": 2488,
+    "val": 225,
+    "test": 287
+  },
+  "sample_seed": 20260725,
+  "num_qubits": 8,
+  "prefix_length": 6,
+  "target_image_index": 6,
+  "qrc": {
+    "g": 0.84,
+    "W": 0.6,
+    "layers_per_injection": 3
+  },
+  "esn": {
+    "protocol": "esn_standard_dim_matched_v1",
+    "layers_per_injection": 3
+  },
+  "reservoir_seeds": [0, 10, 20],
+  "gpus_per_method": [0, 1]
+}

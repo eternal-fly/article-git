@@ -1,0 +1,25 @@
+{
+  "source_processed_dataset": "../data/processed/task1/transition1x_task1_q8_t6_n3000.npz",
+  "processed_dataset": "../data/processed/task5/transition1x_task5_q8_xonly_t18_n3000.npz",
+  "sample_counts": {"train": 2488, "val": 225, "test": 287},
+  "num_qubits": 8,
+  "source_images": 6,
+  "fields_per_image": 3,
+  "total_injections": 18,
+  "target_image_index": 6,
+  "qrc": {
+    "g": 0.84,
+    "W": 0.5,
+    "layers_per_injection": 3,
+    "angle_scale": 1.5707963267948966,
+    "injection_scale": 0.125,
+    "injection_axis": "X"
+  },
+  "dissipation": {
+    "channel": "exact reset-to-|0> between observed reaction images; no post-final reset",
+    "p_grid": [0.0, 0.005, 0.01, 0.025, 0.05, 0.075, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.8]
+  },
+  "ridge_alpha_grid": [1e-6, 1e-4, 1e-2, 0.1, 1.0, 10.0, 100.0, 1000.0, 10000.0],
+  "reservoir_seeds": [0, 10, 20],
+  "gpus_per_method": [0, 1]
+}

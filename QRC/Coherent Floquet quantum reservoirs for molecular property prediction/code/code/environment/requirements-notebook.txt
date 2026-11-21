@@ -1,0 +1,3 @@
+-r requirements-core.txt
+ipython==8.37.0
+nbformat==5.10.4

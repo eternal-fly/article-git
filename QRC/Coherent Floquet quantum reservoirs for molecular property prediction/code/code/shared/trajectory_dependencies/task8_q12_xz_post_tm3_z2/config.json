@@ -1,0 +1,9 @@
+{
+  "task7_config": "../task7_q12_xz_tm3_decoders/config.json",
+  "source_internal_feature_dir": "../task7_q12_xz_tm3_decoders/features",
+  "source_task7_output_dir": "../task7_q12_xz_tm3_decoders/outputs",
+  "temporal_nodes": 3,
+  "sample_times_in_readout_cycles": [0, 1, 2],
+  "observable_family": "Z+ZZ",
+  "readout_dynamics": "one full input-independent DTC Floquet cycle (global RX plus diagonal Z/ZZ phase) between samples; no input injection and no reset inside readout window"
+}

@@ -1,0 +1,15 @@
+{
+  "processed_dataset": "../data/processed/task1/transition1x_task1_q8_t6_n3000.npz",
+  "task1_feature_dir": "../task1/features",
+  "num_qubits": 8,
+  "prefix_length": 6,
+  "qrc": {
+    "g": 0.84,
+    "W": 0.6,
+    "layers_per_injection": 3,
+    "batch_size": 256
+  },
+  "reservoir_seeds": [0, 10, 20],
+  "devices": ["cuda:0", "cuda:1"],
+  "ridge_alphas": [1e-6, 1e-4, 1e-2, 0.1, 1.0, 10.0, 100.0, 1000.0, 10000.0]
+}

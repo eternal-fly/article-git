@@ -1,0 +1,31 @@
+{
+  "source_processed_dataset": "../data/processed/task1/transition1x_task1_q8_t6_n3000.npz",
+  "processed_dataset": "../data/processed/task2/transition1x_task2_q8_t18_n3000.npz",
+  "sample_counts": {
+    "train": 2488,
+    "val": 225,
+    "test": 287
+  },
+  "sample_seed": 20260725,
+  "num_qubits": 8,
+  "source_images": 6,
+  "hierarchical_stages": [
+    "chemical_identity",
+    "identity_plus_geometry",
+    "identity_plus_geometry_plus_motion"
+  ],
+  "injections_per_image": 3,
+  "total_injections": 18,
+  "target_image_index": 6,
+  "qrc": {
+    "g": 0.84,
+    "W": 0.6,
+    "layers_per_injection": 3
+  },
+  "esn": {
+    "protocol": "esn_standard_dim_matched_v1",
+    "layers_per_injection": 3
+  },
+  "reservoir_seeds": [0, 10, 20],
+  "gpus_per_method": [0, 1]
+}

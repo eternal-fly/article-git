@@ -1,0 +1,12 @@
+{
+  "task6_config": "../task6_q12_xz_dissipation_scan/config.json",
+  "source_feature_dir": "../task6_q12_xz_dissipation_scan/features",
+  "temporal_nodes": 3,
+  "readouts": {
+    "linear": "StandardScaler + Ridge; alpha and p selected on validation",
+    "svr": "StandardScaler + RBF epsilon-SVR; same frozen p as linear",
+    "svr_C": [0.1, 1.0, 10.0],
+    "svr_gamma_scales": [0.25, 1.0, 4.0],
+    "svr_epsilon": 0.01
+  }
+}

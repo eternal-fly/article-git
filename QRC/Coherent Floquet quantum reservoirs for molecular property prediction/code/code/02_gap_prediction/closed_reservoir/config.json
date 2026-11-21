@@ -1,0 +1,32 @@
+{
+  "source_dataset": "../shnitsel_a01_surface_hopping/data/processed/a01_windows.npz",
+  "frame_interval_fs": 0.5,
+  "history_steps_grid": [1, 2, 4, 8, 12, 16, 20],
+  "qrc": {
+    "num_qubits": 15,
+    "injection_axis": "XZ",
+    "mapping": "qubit q=(i,j): X_q=pair distance; Z_q=finite-difference radial velocity",
+    "g": 0.84,
+    "W": 0.5,
+    "layers_per_input": 3,
+    "reset_probability": 0.0,
+    "observable_family": "Z+ZZ",
+    "readout": "final",
+    "injection_angle_scale": 0.5,
+    "reservoir_seeds": [0, 10, 20, 30, 40, 50],
+    "batch_size": 128
+  },
+  "reservoir_controls": [
+    "esn_standard",
+    "esn_second_order_recurrent",
+    "fp_cvr"
+  ],
+  "decoders": {
+    "ridge_alpha_grid": [1e-6, 0.0001, 0.01, 0.1, 1.0, 10.0, 100.0],
+    "svr_history_scan_reference": {"C": 1.0, "gamma_scale": 1.0, "epsilon": 0.02},
+    "svr_C_grid": [0.1, 1.0, 10.0, 100.0],
+    "svr_gamma_scale_grid": [0.0625, 0.25, 1.0, 4.0],
+    "svr_epsilon_grid": [0.005, 0.02],
+    "svr_cache_size_mb": 1024
+  }
+}

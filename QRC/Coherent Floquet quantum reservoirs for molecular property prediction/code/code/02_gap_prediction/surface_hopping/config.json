@@ -1,0 +1,46 @@
+{
+  "dataset": {
+    "source": "https://doi.org/10.5281/zenodo.15482819",
+    "archive": "data/raw/A01_75731.zip",
+    "dynamic_file": "data/raw/A01_75731/A01_ethene_0p50fs_dynamic.nc",
+    "archive_md5": "fab7b159843bc097bfe036131a0ec535",
+    "dynamic_sha256": "55440e6799bdd15c931a1005d644811e8aae0cd75e6efb89a04ea4d68144f4d1",
+    "frame_interval_fs": 0.5,
+    "history_steps": 20,
+    "forecast_horizons_steps": [2, 10, 20],
+    "minimum_gap_window_steps": 10,
+    "samples_per_trajectory": 8,
+    "split_seed": 20260826,
+    "split_fractions": [0.6, 0.2, 0.2],
+    "sampling": "eight deterministic evenly spaced valid endpoints per complete trajectory"
+  },
+  "qrc": {
+    "num_qubits": 15,
+    "injection_axis": "XZ",
+    "mapping": "qubit q=(i,j): X_q=pair distance; Z_q=finite-difference radial velocity",
+    "normalization": "per-pair/per-channel mean and std fitted on training trajectories only",
+    "z_clip": 5.0,
+    "injection_angle_scale": 0.5,
+    "g": 0.84,
+    "W": 0.5,
+    "layers_per_input": 3,
+    "observable_family": "Z+ZZ",
+    "readouts": ["final", "tm3"],
+    "tm3_cycles": [0, 1, 2],
+    "p_grid": [
+      0.0, 0.0025, 0.005, 0.01, 0.02, 0.04, 0.05, 0.08,
+      0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5,
+      0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0
+    ],
+    "reservoir_seeds": [0, 10, 20, 30, 40, 50],
+    "batch_size": 128
+  },
+  "decoders": {
+    "ridge_alpha_grid": [1e-6, 0.0001, 0.01, 0.1, 1.0, 10.0, 100.0],
+    "svr_p_scan_reference": {"C": 1.0, "gamma_scale": 1.0, "epsilon": 0.02},
+    "svr_C_grid": [0.1, 1.0, 10.0, 100.0],
+    "svr_gamma_scale_grid": [0.0625, 0.25, 1.0, 4.0],
+    "svr_epsilon_grid": [0.005, 0.02],
+    "svr_cache_size_mb": 1024
+  }
+}
